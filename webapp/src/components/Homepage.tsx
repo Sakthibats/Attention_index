@@ -6,8 +6,9 @@ const Homepage = () => {
   return (
     <div className='home'>
       <FeaturedInfo/>
-      <Chart/>
-
+      <div className='charting'>
+        <Chart/>
+      </div>
       </div>
   )
 }

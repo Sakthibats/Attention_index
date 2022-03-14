@@ -1,3 +1,7 @@
 .home{
     flex:4;
 }
+
+.charting{
+    height: 560;
+}
