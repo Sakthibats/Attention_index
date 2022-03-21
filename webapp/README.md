@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+## Before Starting
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Make sure firebase authentication file in the following directory
+```bash
+webapp\src\components\Firebase.tsx
+```
 
 ## Available Scripts
 
