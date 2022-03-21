@@ -3,10 +3,11 @@ import './chart.css'
 
 import RealtimeLineChart from "./RealtimeLineChart";
 import db from './Firebase';
-import { collection, getDocs, onSnapshot } from '@firebase/firestore';
+import { collection, query, orderBy, limit} from '@firebase/firestore';
+import { useCollectionData  } from 'react-firebase-hooks/firestore';
 
 
-const TIME_RANGE_IN_MILLISECONDS = 30 * 1000;
+const TIME_RANGE_IN_MILLISECONDS = 90 * 1000;
 const ADDING_DATA_INTERVAL_IN_MILLISECONDS = 1000;
 const ADDING_DATA_RATIO = 0.8;
 
@@ -17,8 +18,18 @@ export default () => {
     data: []
   }));
   const [dataList, setDataList] = React.useState(defaultDataList);
-  const[metrics,setMetrics]= React.useState([]);
+  
+  // Onchange in firebase Query recent 3 updates made to database to update graph subsequently
+  const [value, loading, error, snapshot] = useCollectionData(
+    query(collection(db, 'Meeting104'), orderBy("time", "desc"), limit(3)),
+    {
+      snapshotListenOptions: { includeMetadataChanges: true },
+    }
+  );
 
+  console.log(value)
+
+  // Append most recent data to datalist
   const addlastdata = data => {
     if (Math.random() < 1 - ADDING_DATA_RATIO) {
       return data;
@@ -27,17 +38,13 @@ export default () => {
       ...data,
       {
         x: new Date(),
-        y: metrics[metrics.length -1].blinks
+        y: Math.round(value[0].attention)
       }
     ];
   };
 
   React.useEffect(() => {
     const interval = setInterval(() => {
-      onSnapshot(collection(db,"Meeting 101"),(snapshot)=>{
-          let list = snapshot.docs.map((doc)=>({...doc.data()})).sort((a, b) => parseFloat(a.time) - parseFloat(b.time))
-          setMetrics(list)
-      });
       setDataList(
         dataList.map(val => {
           return {
@@ -54,6 +61,7 @@ export default () => {
   return (
     <div className='chart'>
     <h3 className='chartTitle'>Attention Index</h3>
+    <h3 className="alert"></h3>
       <RealtimeLineChart
         dataList={dataList}
         range={TIME_RANGE_IN_MILLISECONDS}

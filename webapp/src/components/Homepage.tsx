@@ -5,7 +5,7 @@ import Chart from './Chart'
 const Homepage = () => {
   return (
     <div className='home'>
-      <FeaturedInfo/>
+      {/* <FeaturedInfo/> */}
       <div className='charting'>
         <Chart/>
       </div>

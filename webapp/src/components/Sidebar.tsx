@@ -1,6 +1,7 @@
 
 import "./sidebar.css"
 import { LineStyle,Timeline } from '@mui/icons-material'
+import AssessmentIcon from '@mui/icons-material/Assessment';
 
 const Sidebar = () => {
   return (
@@ -12,20 +13,19 @@ const Sidebar = () => {
                         <li className='sidebarListItem'>
                             <LineStyle className="sidebarIcon"/>
                             Home
-                            </li>
-                            <li className='sidebarListItem'>
+                        </li>
+                        <li className='sidebarListItem'>
                             <Timeline className="sidebarIcon"/>
                             Analytics
-                            </li>
-                           
-                        </ul>
-                    
-                </div>
-            
+                        </li>
+                        <li className='sidebarListItem'>
+                            <AssessmentIcon className="sidebarIcon"/>
+                            Report
+                        </li>       
+                    </ul>
             </div>
-        
         </div>
-    
+    </div>
   )
 }
 

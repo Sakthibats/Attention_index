@@ -1,3 +1,7 @@
+*{
+    font-family: 'Rubik';
+}
+
 .sidebar{
     flex:1;
     height:100vh;
@@ -7,14 +11,14 @@
 }
 .sidebarWrapper{
     padding: 20px;
-    color:rgb(134, 35, 35)
+    color:#FF585D
 }
 .sidebarMenu{
     margin-bottom:10px;
 }
 .sidebarTitle{
    font-size: 17px; 
-   color: rgb(187,186,186);
+   color: #505258;
 
 }
 .sidebarList{
@@ -31,7 +35,8 @@
 }
 
 .sidebarListItem:hover{
-    background-color: rgb(240,240,255);
+    background-color: #FF585D;
+    color: aliceblue;
 }
 
 .sidebarIcon{

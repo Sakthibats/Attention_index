@@ -18,8 +18,9 @@
 
 }
 .logo{
+    font-family: 'Rubik';
     font-weight:bold;
-    font-size: 30px;
-    color:darkblue;
+    font-size: 50px;
+    color: #FF585D;
     cursor: pointer;
 }
