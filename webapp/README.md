@@ -1,6 +1,6 @@
 ## Before Starting
 
-Make sure firebase authentication file in the following directory
+Make sure firebase authentication file is in the following directory
 ```bash
 webapp\src\components\Firebase.tsx
 ```
