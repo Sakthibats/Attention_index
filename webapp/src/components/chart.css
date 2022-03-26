@@ -1,11 +1,17 @@
 .chart{
-    margin:20px;
-    padding: 20px;
-    -webkit-box-shadow: 0px 0px 11px -1px #000000; 
-    box-shadow: 0px 0px 11px -1px #000000;
+   
+    padding: 30px;
+    align-self: center;
+
 }
 
 .chartTile{
-    margin-bottom: 20px;
+    float: left;
+
+    width: 60%;
+
+    background-color: wheat;
+    border-radius: 20px;
+    margin-left: 20px;
 
 }

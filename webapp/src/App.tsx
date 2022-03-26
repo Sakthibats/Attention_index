@@ -12,11 +12,7 @@ function App() {
       <div className='container'>
         <Sidebar/>
         <Homepage/>
-        
-
-        </div>
-      
-      
+        </div>     
     </div>
   );
 }

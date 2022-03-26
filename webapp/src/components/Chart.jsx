@@ -59,13 +59,22 @@ export default () => {
   });
 
   return (
-    <div className='chart'>
-    <h3 className='chartTitle'>Attention Index</h3>
-    <h3 className="alert"></h3>
-      <RealtimeLineChart
-        dataList={dataList}
-        range={TIME_RANGE_IN_MILLISECONDS}
-      />
-    </div>
+    <>
+     <h3 className='chartTitle'>Attention Index</h3>
+
+    <div className="chartTile">
+       
+        <div className='chart'>
+       
+            <RealtimeLineChart
+                dataList={dataList}
+                range={TIME_RANGE_IN_MILLISECONDS}
+            />
+          
+        </div>
+
+      </div>
+   
+    </>
   );
 };

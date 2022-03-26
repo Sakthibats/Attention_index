@@ -16,6 +16,8 @@ export default props => {
       enabled: false
     },
     chart: {
+      height: '100%',
+      width: '100%',
       animations: {
         enabled: true,
         easing: 'linear',
