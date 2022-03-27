@@ -1,6 +1,6 @@
 .chart{
    
-    padding: 30px;
+    padding: 20px;
     align-self: center;
 
 }
@@ -12,6 +12,6 @@
 
     background-color: wheat;
     border-radius: 20px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 
 }

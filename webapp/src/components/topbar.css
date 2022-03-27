@@ -11,7 +11,7 @@
 
 .topbarWrapper{
     height:100%;
-    padding:0px 20px;
+    padding:0px 1%;
     display: flex;
     align-items:center;
     justify-content: space-between;
@@ -22,17 +22,37 @@
     image-rendering: auto;
     image-resolution: 300dpi;
     vertical-align: middle;
-    padding: 10px;
+    /* padding: 10px; */
     max-height: 30px;
     align-items: flex-start;
     cursor: pointer;
 }
 
 .profile{
-    size: 30px;
-    clip-path: circle(20px at center);
-    align-items: flex-end;
-    padding: 20px;
-    background-color: orange;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid gray; 
+ 
+    background-color: skyblue;
     cursor: pointer;
+}
+
+.icon{
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+    margin: 40px;
+    vertical-align: middle;
+}
+
+.itemArray{
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+    
 }

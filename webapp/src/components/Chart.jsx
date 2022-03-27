@@ -1,5 +1,6 @@
 import React from "react";
 import './chart.css'
+import '../styles/text_styles.css'
 
 import RealtimeLineChart from "./RealtimeLineChart";
 import db from './Firebase';

@@ -1,6 +1,8 @@
 import React from "react";
 import Chart from "react-apexcharts";
 
+import '../styles/stylesheet.css'
+
 export default props => {
   const options = {
     fill: {
@@ -18,6 +20,7 @@ export default props => {
     chart: {
       height: '100%',
       width: '100%',
+      fontFamily: 'AssistantMedium',
       animations: {
         enabled: true,
         easing: 'linear',
@@ -42,10 +45,11 @@ export default props => {
       range: props.range
     },
     yaxis: {
+      max: 100 ,
       labels: {
-        formatter: val => val.toFixed(0)
+        formatter: val => val.toFixed(1)
       },
-      title: { text: "Attention Score" }, 
+      title: { text: "Attention Score"}, 
     }
   };
   return <Chart type="area" options={options} series={props.dataList} />;

@@ -1,0 +1,38 @@
+
+/* fonts */
+@font-face {
+    font-family: 'AssistantRegular';
+    src: local('Assistant'),
+        url(../fonts/Assistant/Assistant-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'AssistantBold';
+    src: local('Assistant'),
+        url(../fonts/Assistant/Assistant-Bold.ttf) format('truetype')        ;
+  }
+
+  @font-face {
+    font-family: 'AssistantMedium';
+    src: local('Assistant'),
+        url(../fonts/Assistant/Assistant-Medium.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'AssistantLight';
+    src: local('Assistant'),
+        url(../fonts/Assistant/Assistant-Light.ttf) format('truetype');
+  }
+
+
+  @font-face {
+    font-family: 'CourierRegular';
+    src: local('Courier'),
+        url(../fonts/Courier/CourierPrime-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'CourierBold';
+    src: local('Courier'),
+        url(../fonts/Courier/CourierPrime-Bold.ttf) format('truetype');
+  }
