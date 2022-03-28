@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import Sidebar from './components/Sidebar';
-import Homepage from './components/Homepage';
+import Homepage from './pages/Homepage';
 import "./app.css"
 
 
@@ -8,9 +8,8 @@ import "./app.css"
 function App() {
   return (
     <div>
-      <Header />
+      <Sidebar />
       <div className='container'>
-        {/* <Sidebar/> */}
         <Homepage/>
         </div>     
     </div>

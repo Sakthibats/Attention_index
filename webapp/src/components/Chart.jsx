@@ -1,11 +1,12 @@
 import React from "react";
 import './chart.css'
-import '../styles/text_styles.css'
+import '../styles/stylesheet.css'
 
 import RealtimeLineChart from "./RealtimeLineChart";
 import db from './Firebase';
 import { collection, query, orderBy, limit} from '@firebase/firestore';
 import { useCollectionData  } from 'react-firebase-hooks/firestore';
+import { Divider } from "@mui/material";
 
 
 const TIME_RANGE_IN_MILLISECONDS = 90 * 1000;
@@ -61,21 +62,36 @@ export default () => {
 
   return (
     <>
-     <h3 className='chartTitle'>Attention Index</h3>
 
-    <div className="chartTile">
-       
-        <div className='chart'>
-       
-            <RealtimeLineChart
-                dataList={dataList}
-                range={TIME_RANGE_IN_MILLISECONDS}
-            />
-          
-        </div>
-
+    <div className='lineTitle'>Attention Index</div>
+    <div className='settingsTitle'>Options</div>
+  
+    <div className="graphWrapper">
+      <div className="chartTile">
+          <div className='chart'>
+              <RealtimeLineChart
+                  dataList={dataList}
+                  range={TIME_RANGE_IN_MILLISECONDS}/>
+          </div>
       </div>
-   
-    </>
+
+      
+      <div className="chartSettings">
+        
+        <ul className="settingsItem">Option 1</ul>
+        <Divider variant="middle"/>
+        <ul className="settingsItem">Option 2</ul>
+        <Divider variant="middle"/>
+        <ul className="settingsItem">Option 3</ul>
+        <Divider variant="middle"/>
+        <ul className="settingsItem">Option 4</ul>
+        <Divider variant="middle"/>
+        <ul className="settingsItem">Option 5</ul>
+        <ul className="settingsItem">Option 6</ul>
+        
+      </div>
+  
+    </div>
+  </>
   );
 };

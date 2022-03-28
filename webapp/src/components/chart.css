@@ -1,7 +1,34 @@
+@import '../styles/stylesheet.css';
+
 .chart{
    
     padding: 20px;
     align-self: center;
+
+}
+
+.graphWrapper{
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.lineTitle{
+    float: left;
+
+    font-family: AssistantRegular;
+    font-size: 26px;
+    width: fit-content;
+    margin-top: 20px;
+
+}
+
+.settingsTitle{
+    float: right;
+
+    font-family: AssistantRegular;
+    font-size: 26px;
+    width: fit-content;
+    margin-top: 20px;
 
 }
 
@@ -12,6 +39,31 @@
 
     background-color: wheat;
     border-radius: 20px;
-    /* margin-left: 20px; */
+    /* margin-right: 10%; */
+
+    /* overflow-x: scroll; */
 
 }
+
+.chartSettings{
+    float: right;
+    width: 35%;
+
+    border-radius: 20px;
+    padding: 20px 0;
+    border: 6px solid wheat;
+    
+    
+    /* overflow-y: scroll; */
+}
+
+.settingsItem{
+    display:flex;
+    margin: 10px 0;
+
+    font-family: 'CourierRegular';
+    color: gray;
+    
+
+}
+
